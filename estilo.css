@@ -1,9 +1,16 @@
 /* EXERCÍCIO 1: fontes */
 /* importá-las aqui... e definir as `font-family` da turminha... */
+@import 'fonts/ravie.css';
+@import 'fonts/verdana.css';
 
+html {
+  min-height: 100vh;
+}
 
 body {
   background-color: #fff;
+  min-height: 100vh;
+  margin: 0;
 }
 
 strong {
@@ -21,6 +28,7 @@ strong {
   border-top: 1px solid #aac0ae;
   border-bottom: 1px solid #aac0ae;
   border-left: 1px solid #aac0ae;
+  font-family: 'Verdana', 'OpenSans', sans-serif;
 }
 
 #cardapio h3 {
@@ -38,26 +46,34 @@ strong {
 /* EXERCÍCIO 2: layout da página */
 #recipiente {
   /* layout da página aqui */
-  /* ... */
-  /* ... */
-  /* ... */
-  /* ... */
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 154px 1fr;
+  grid-template-rows: auto 1fr auto;
+
 }
 
 #cabecalho-pagina {
-
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 
 #lateral {
-
+  grid-column: 1/2;
+  grid-row: 1/4;
 }
 
 #cardapio {
-
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 #rodape-pagina {
-
+  grid-column: 2/3;
+  grid-row: 3/4;
 }
 
 
@@ -72,6 +88,7 @@ strong {
   font-size: 36px;
   color: #e90c0c;
   font-weight: normal;
+  font-family: 'Ravie';
 }
 
 #cabecalho-pagina h2 {
@@ -79,6 +96,7 @@ strong {
   font-size: 24px;
   color: #333;
   font-weight: normal;
+  font-family: 'Verdana', 'OpenSans', sans-serif;
 }
 
 /* EXERCÍCIO 4: cada item do menu */
