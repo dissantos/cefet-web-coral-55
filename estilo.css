@@ -5,6 +5,14 @@
 
 :root {
   --ticket-height: 84px;
+  --window-background-color: #fff;
+  --menu-border-color: #aac0ae;
+  --container-border-color: #d3d3d3;
+  --menu-title-color: #e90c0c;
+  --strong-text-color: #d027aa;
+  --menu-text-color: #333;
+  --menu-background-color-1: #f6f1b2;
+  --menu-background-color-2: #4599b2;
 }
 
 
@@ -13,38 +21,38 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--window-background-color);
   min-height: 100vh;
   margin: 0;
 }
 
 strong {
-  color: #d027aa;
+  color: var(--strong-text-color);
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
-  border-left: 1px solid #d3d3d3;
-  border-right: 1px solid #d3d3d3;
+  background-image: linear-gradient(to bottom, var(--menu-background-color-1) , var(--menu-background-color-2)  80%);
+  border-left: 1px solid var(--container-border-color);
+  border-right: 1px solid var(--container-border-color);
 }
 
 #cardapio {
   background-color: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid #aac0ae;
-  border-bottom: 1px solid #aac0ae;
-  border-left: 1px solid #aac0ae;
+  border-top: 1px solid var(--menu-border-color);
+  border-bottom: 1px solid var(--menu-border-color);
+  border-left: 1px solid var(--menu-border-color);
   font-family: 'Verdana', 'OpenSans', sans-serif;
 }
 
 #cardapio h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--menu-text-color);
   margin-top: 30px;
 }
 
 #cardapio article {
   font-size: 14px;
-  color: #333;
+  color: var(--menu-text-color);
 }
 
 
@@ -91,7 +99,7 @@ strong {
 #cabecalho-pagina h1 {
   margin: 0;
   font-size: 36px;
-  color: #e90c0c;
+  color: var(--menu-title-color);
   font-weight: normal;
   font-family: 'Ravie';
   text-align: center;
@@ -100,7 +108,7 @@ strong {
 #cabecalho-pagina h2 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: var(--menu-text-color);
   font-weight: normal;
   font-family: 'Verdana', 'OpenSans', sans-serif;
   text-align: end;
@@ -167,4 +175,18 @@ article {
    as custom properties */
 /* coloque aqui a media query para sobrescrever o valor
    das custom properties para o modo escuro */
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --window-background-color: #292b2c;
+    --menu-border-color: #aac0ae4f;
+    --container-border-color: #d3d3d38f;
+    --menu-text-color: #f7f7f7;
+    --menu-title-color: #e90c0cc7;
+    --strong-text-color: #f562d5;
+    --menu-background-color-1: #2b5876;
+    --menu-background-color-2: #4e4376;
+  }
+}
 
